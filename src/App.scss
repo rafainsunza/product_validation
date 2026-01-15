@@ -1,1 +1,144 @@
 @use "index" as *;
+
+main {
+  min-height: 100dvh;
+  background-color: $background;
+  color: $primary-text;
+  font-family: "Inter", sans-serif;
+
+  @media (min-width: 650px) {
+    padding: 30px 0;
+  }
+}
+
+.product__validation {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 30px 10px;
+    border-radius: 20px;
+
+    @media (min-width: 650px) {
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+  }
+
+  &__title {
+    font-size: 42px;
+    word-spacing: 3px;
+    line-height: 50px;
+    padding: 5px 0;
+
+    &__breaker {
+      @media (min-width: 480px) {
+        display: none;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: $tertiary-text;
+    font-weight: 400;
+    padding: 5px 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__image {
+    width: 100%;
+
+    &__wrapper {
+      margin: 0 -10px;
+    }
+  }
+
+  &__price {
+    font-weight: 600;
+    padding: 15px 0;
+  }
+
+  &__button {
+    background-color: $button-color;
+    color: $secondary-text;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 6px;
+    width: 250px;
+    padding: 7px 0;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 15px 10px -15px #111;
+      background-color: $button-color-hover;
+    }
+  }
+
+  &__list {
+    padding: 30px 0;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: max-content;
+
+    &__title {
+      font-size: 20px;
+      word-spacing: 3px;
+      margin-bottom: 10px;
+      line-height: 25px;
+
+      &__breaker {
+        @media (min-width: 400px) {
+          display: none;
+        }
+      }
+    }
+
+    &__input {
+      width: 90%;
+      margin: 12px 0;
+      border-radius: 6px;
+      border: 2px solid lightgray;
+      padding: 5px 10px;
+      transition: transform 0.3s ease;
+      outline: none;
+
+      &:focus,
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &__button {
+      width: 90%;
+      background-color: $button-color;
+      color: $secondary-text;
+      border: none;
+      font-weight: 600;
+      font-size: 18px;
+      border-radius: 6px;
+      padding: 5px 0;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $button-color-hover;
+        box-shadow: 0px 15px 10px -15px #111;
+      }
+    }
+  }
+
+  &__footer {
+    color: $tertiary-text;
+    font-size: 15px;
+    padding: 30px 0;
+  }
+}
